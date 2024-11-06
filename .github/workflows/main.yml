@@ -50,9 +50,16 @@ jobs:
     # - name: copy index.html to 404.html
     #   run: cp PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.htmlPastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/404.html
 
+    - name: Add .nojekyll file2
+      run: pwd
+
+
+    - name: Add .nojekyll file3
+      run: ls
+
     - name: Add .nojekyll file
       run: touch PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish/.nojekyll
-
+ 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
