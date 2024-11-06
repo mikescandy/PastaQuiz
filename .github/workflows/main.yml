@@ -55,7 +55,24 @@ jobs:
 
 
     - name: Add .nojekyll file3
-      run: ls
+      run: ls PastaQuiz2
+
+
+    - name: Add .nojekyll file4
+      run: ls PastaQuiz2/PastaQuiz2.Browser
+
+
+    - name: Add .nojekyll file5
+      run: ls PastaQuiz2/PastaQuiz2.Browser/bin
+
+    - name: Add .nojekyll file6
+      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release
+
+    - name: Add .nojekyll file7
+      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser
+
+    - name: Add .nojekyll file8
+      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish
 
     - name: Add .nojekyll file
       run: touch PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish/.nojekyll
