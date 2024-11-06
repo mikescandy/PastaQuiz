@@ -26,36 +26,36 @@ jobs:
     - name: Publish .NET Project
       run: dotnet publish PastaQuiz2/PastaQuiz2.Browser/PastaQuiz2.Browser.csproj -c Release -o release --nologo -p:NativeDebugSymbols=false -p:StackTraceSupport=false
 
-    - name: Brotli Compress Output (dll)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/managed -p '*.dll' --format br --threads 4
+    # - name: Brotli Compress Output (dll)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/managed -p '*.dll' --format br --threads 4
 
-    - name: Brotli Compress Output (js)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.js' --format br --threads 4
+    # - name: Brotli Compress Output (js)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.js' --format br --threads 4
 
-    - name: Brotli Compress Output (wasm)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.wasm' --format br --threads 4
+    # - name: Brotli Compress Output (wasm)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.wasm' --format br --threads 4
 
-    - name: GZip Compress Output (dll)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/managed -p '*.dll' --format gz --threads 4
+    # - name: GZip Compress Output (dll)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/managed -p '*.dll' --format gz --threads 4
 
-    - name: GZip Compress Output (js)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.js' --format gz --threads 4
+    # - name: GZip Compress Output (js)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.js' --format gz --threads 4
 
-    - name: GZip Compress Output (wasm)
-      run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.wasm' --format gz --threads 4
+    # - name: GZip Compress Output (wasm)
+    #   run: DotNetCompress -d PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/ -p '*.wasm' --format gz --threads 4
 
-    - name: Change base-tag in index.html from / to Primus
-      run: sed -i 's/<base href="\/" \/>/<base href="\/primus\/" \/>/g' PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.html
+    # - name: Change base-tag in index.html from / to Primus
+    #   run: sed -i 's/<base href="\/" \/>/<base href="\/primus\/" \/>/g' PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.html
 
-    - name: copy index.html to 404.html
-      run: cp PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.htmlPastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/404.html
+    # - name: copy index.html to 404.html
+    #   run: cp PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.htmlPastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/404.html
 
     - name: Add .nojekyll file
-      run: touch PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/.nojekyll
+      run: touch PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish/.nojekyll
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle
+        FOLDER: PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish
