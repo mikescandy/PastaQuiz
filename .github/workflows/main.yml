@@ -50,36 +50,12 @@ jobs:
     # - name: copy index.html to 404.html
     #   run: cp PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.htmlPastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/404.html
 
-    - name: Add .nojekyll file2
-      run: pwd
-
-
-    - name: Add .nojekyll file3
-      run: ls PastaQuiz2
-
-
-    - name: Add .nojekyll file4
-      run: ls PastaQuiz2/PastaQuiz2.Browser
-
-
-    - name: Add .nojekyll file5
-      run: ls PastaQuiz2/PastaQuiz2.Browser/bin
-
-    - name: Add .nojekyll file6
-      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release
-
-    - name: Add .nojekyll file7
-      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser
-
-    - name: Add .nojekyll file8
-      run: ls PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish
-
     - name: Add .nojekyll file
-      run: touch PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish/.nojekyll
+      run: touch release/.nojekyll
  
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/publish
+        FOLDER: release
