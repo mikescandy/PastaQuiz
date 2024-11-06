@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PastaQuiz2.Browser",
   "resources": {
-    "hash": "sha256-SE6ZKK0hw65z2y3de8o67d4YUeRUTMn8Neia+6J9Rko=",
+    "hash": "sha256-/+7hRqMraRaaYCS0giMr7VdVMxAYse0A5XvwGFG5F0Q=",
     "jsModuleNative": {
       "dotnet.native.8.0.10.sg823dhfnq.js": "sha256-D0DUt3PyCg/1FI2TfaTQC+Vz5qMHEkjixK5/ptM/ER0="
     },
@@ -39,8 +39,8 @@
       "HarfBuzzSharp.wasm": "sha256-/CvwEiV3zkicR5EQbrUDi3uhDCCj1ADPF6gn0viRG9o=",
       "MicroCom.Runtime.wasm": "sha256-dI22KS20yc+ziyg4tSUpmSjG0ebPXDL5QTSZf+ehjwI=",
       "netstandard.wasm": "sha256-Qm84xTknMKp/towCobpRXVbN6DyCK+p7/xQqj8iun/g=",
-      "PastaQuiz2.Browser.wasm": "sha256-6jY97Na+b9urleJkmHPJqfJQKdHgI8qF2OmG+cQaO48=",
-      "PastaQuiz2.wasm": "sha256-tO0nDXAUXMRRmzKXRPRIYtKlZHUqnKwTY0EysnuCt9w=",
+      "PastaQuiz2.Browser.wasm": "sha256-CsWvHTGfh0POZIzc9pYGoIVhrLEDa1kzBqchCrfAsNQ=",
+      "PastaQuiz2.wasm": "sha256-o4iFeJS6tRZiFMGI1LMZAFt16oQrC+EXWAE6v7ixKQs=",
       "ReactiveUI.wasm": "sha256-bpA+fQjTgScjvwNcv1c83WDrH/MQ5rNH5QwBaeDsBUA=",
       "SkiaSharp.SceneGraph.wasm": "sha256-XuFLopOfzenVFHLGeUjcEXdMqURVIWlYaucEwQS6Xmk=",
       "SkiaSharp.Skottie.wasm": "sha256-+tevo0Yld0VOALIU5mjdGGjk6SQkJ/eF2vXkEvNRKMU=",
