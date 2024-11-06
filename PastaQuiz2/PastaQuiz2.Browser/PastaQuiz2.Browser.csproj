@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0-browser</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Browser" Version="$(AvaloniaVersion)"/>
+        <PackageReference Include="SkiaSharp.Skottie" Version="2.88.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\PastaQuiz2\PastaQuiz2.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="wwwroot\Media\anellini.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\bucatini.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\conchiglie.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\farfalle.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\fettuccine.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\fusilli.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\gnocchi.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\lasagne.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\mafaldine.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\pappardelle.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\penne.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\ravioli.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\rigatoni.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\spaghetti.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\stelline.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\tagliatelle.mp3" />
+      <AvaloniaResource Include="wwwroot\Media\tortellini.mp3" />
+    </ItemGroup>
+</Project>

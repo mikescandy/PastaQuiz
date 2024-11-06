@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:PastaQuiz2.ViewModels"
+             xmlns:lottie="clr-namespace:Avalonia.Labs.Lottie;assembly=Avalonia.Labs.Lottie"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PastaQuiz2.Views.MainView"
+             x:DataType="vm:MainViewModel"
+             Background="White">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <UserControl.Styles>
+
+    </UserControl.Styles>
+    <ScrollViewer>
+        <Grid>
+
+            <StackPanel Orientation="Vertical" Spacing="25" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                        Margin="0,50,0,0">
+                <Grid HorizontalAlignment="Stretch">
+                    <!--  <Grid.Shadow> -->
+                    <!--     <Shadow Brush="Black" -->
+                    <!--     Offset="20,20" -->
+                    <!--     Radius="40" -->
+                    <!--     Opacity="0.8" /> -->
+                    <!-- </Grid.Shadow> -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="11*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border x:Name="thebox" Grid.Column="1" Grid.Row="1" Background="White" Padding="0,0" BoxShadow="10 10 10 0 Gray"
+                            Height="400">
+                        <Image Source="avares://PastaQuiz2/Assets/Images/farfalle.jpg" x:Name="PastaImg" Stretch="UniformToFill"></Image>
+                    </Border>
+                </Grid>
+                <TextBlock Text="Ciao!" FontSize="32" TextAlignment="Center" Foreground="Black" />
+                <TextBlock Text="Guess the name of this type of pasta!" FontSize="18" TextAlignment="Center"
+                           Foreground="Black" />
+                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*, *" HorizontalAlignment="Stretch" Margin="0,0,0,0">
+                    <Border Margin="10" Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Stretch"
+                            Height="40" BoxShadow="5 5 5 Gray">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="100%,0%">
+                                <GradientStop Color="#008C45" Offset="0.1" />
+                                <GradientStop Color="#F4F9FF" Offset="0.40" />
+                                <GradientStop Color="#F4F9FF" Offset="0.50" />
+                                <GradientStop Color="#CD212A" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Background="Transparent" x:Name="PastaBtn1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Click="PastaBtn4_OnClick" Foreground="Black">
+                            Conchiglie
+                        </Button>
+                    </Border>
+                    <Border Margin="10" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Height="40" BoxShadow="5 5 5 Gray">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="100%,0%">
+                                <GradientStop Color="#008C45" Offset="0.1" />
+                                <GradientStop Color="#F4F9FF" Offset="0.40" />
+                                <GradientStop Color="#F4F9FF" Offset="0.50" />
+                                <GradientStop Color="#CD212A" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Background="Transparent" x:Name="PastaBtn2" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Click="PastaBtn4_OnClick" Foreground="Black">
+                            Farfalle
+                        </Button>
+                    </Border>
+                    <Border Margin="10" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Height="40" BoxShadow="5 5 5 Gray">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="100%,0%">
+                                <GradientStop Color="#008C45" Offset="0.1" />
+                                <GradientStop Color="#F4F9FF" Offset="0.40" />
+                                <GradientStop Color="#F4F9FF" Offset="0.50" />
+                                <GradientStop Color="#CD212A" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Background="Transparent" x:Name="PastaBtn3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Click="PastaBtn4_OnClick" Foreground="Black">
+                            Penne
+                        </Button>
+                    </Border>
+                    <Border Margin="10" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Stretch" Height="40" BoxShadow="5 5 5 Gray">
+                        <Border.Background>
+                            <!-- <LinearGradientBrush StartPoint="0%,0%" EndPoint="0%,100%"> -->
+                            <LinearGradientBrush EndPoint="100%,0%">
+                                <GradientStop Color="#008C45" Offset="0.1" />
+                                <GradientStop Color="#F4F9FF" Offset="0.40" />
+                                <GradientStop Color="#F4F9FF" Offset="0.50" />
+                                <GradientStop Color="#CD212A" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Background="Transparent" x:Name="PastaBtn4" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                Click="PastaBtn4_OnClick" Foreground="Black">
+                            Spaghetti
+                        </Button>
+                    </Border>
+                </Grid>
+            </StackPanel>
+            <lottie:Lottie Name="Animation" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RepeatCount="1"
+                           IsVisible="false" Path="avares://PastaQuiz2/Assets/Animations/confetti0.json" />
+            <!-- <skia:SKLottieView -->
+            <!--      x:Name="Animation" -->
+            <!--       IsVisible="false" -->
+            <!--      RepeatCount="-1" -->
+            <!--       VerticalOptions="FillAndExpand" -->
+            <!--      HorizontalOptions="FillAndExpand" />  -->
+        </Grid>
+    </ScrollViewer>
+</UserControl>
