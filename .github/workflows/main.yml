@@ -51,11 +51,11 @@ jobs:
     #   run: cp PastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/index.htmlPastaQuiz2/PastaQuiz2.Browser/bin/Release/net8.0-browser/browser-wasm/AppBundle/404.html
 
     - name: Add .nojekyll file
-      run: touch release/.nojekyll
+      run: touch release/wwwroot/.nojekyll
  
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: release
+        FOLDER: release/wwwroot
